@@ -1,0 +1,18 @@
+[
+    {
+      "id": "pub1",
+      "title": "A Novel Approach to Neural Network Optimization",
+      "authors": "Ipsum, L., Amet, D. S., Adipiscing, C.",
+      "journal": "Journal of Machine Learning Research, 2024",
+      "link": "#",
+      "bibtex": "@article{Ipsum2024,\n  author    = {Ipsum, L. and Amet, D. S. and Adipiscing, C.},\n  title     = {A Novel Approach to Neural Network Optimization},\n  journal   = {Journal of Machine Learning Research},\n  year      = {2024}\n}"
+    },
+    {
+      "id": "pub2",
+      "title": "Understanding Brain-Inspired AI Architectures",
+      "authors": "Tempor, E., Labore, I. U.",
+      "journal": "Proceedings of the Conference on Cognitive Science, 2023",
+      "link": "#",
+      "bibtex": "@inproceedings{Tempor2023,\n  author    = {Tempor, E. and Labore, I. U.},\n  title     = {Understanding Brain-Inspired AI Architectures},\n  booktitle = {Proceedings of the Conference on Cognitive Science},\n  year      = {2023}\n}"
+    }
+  ]

@@ -1,0 +1,57 @@
+{
+    "timeline": [
+      {
+        "type": "event",
+        "side": "right",
+        "data": {
+          "year": "2013",
+          "title": "BA in Computer Science and Engineering",
+          "institution": "Dartmouth College",
+          "description": "Near the end of undergrad I fell in love with the idea of building intelligent systems inspired by how the brain works."
+        }
+      },
+      { "type": "decorative", "side": "left" },
+      {
+        "type": "event",
+        "side": "left",
+        "data": {
+          "year": "2014–2015",
+          "title": "PhD Start in Computer Science",
+          "institution": "University of Rochester",
+          "description": "Eventually realized that building 'brain inspired' AI means we first need to understand brains."
+        }
+      },
+      { "type": "decorative", "side": "right" },
+      {
+        "type": "event",
+        "side": "right",
+        "data": {
+          "year": "2015–2020",
+          "title": "PhD in Brain and Cognitive Science",
+          "institution": "University of Rochester, Ralf Haefner Lab",
+          "description": "Studied visual perception both in theory and in humans and monkeys through the lens of Bayesian inference."
+        }
+      },
+      {
+        "type": "event",
+        "side": "left",
+        "data": {
+          "year": "2020–2023",
+          "title": "Postdoctoral Fellow",
+          "institution": "University of Pennsylvania, Konrad Kording Lab",
+          "description": "Studied deep neural networks and structure in the kinds of internal representations they develop."
+        }
+      },
+      { "type": "decorative", "side": "right" },
+      {
+        "type": "event",
+        "side": "right",
+        "data": {
+          "year": "2023–Present",
+          "title": "Assistant Professor of Computer Science",
+          "institution": "RIT",
+          "description": "Exploring how neuroscience can be used to develop more capable AI systems."
+        }
+      }
+    ]
+  }
