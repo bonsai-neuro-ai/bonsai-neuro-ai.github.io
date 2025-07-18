@@ -7,7 +7,7 @@ name: Deploy GH Pages
 on:
   # trigger when something is pushed to the branch main
   push: 
-    branches: [ "main" ]
+    branches: [ "main", "11ty" ]
   # make it possible to trigger manually, useful for debugging
   workflow_dispatch: 
 
