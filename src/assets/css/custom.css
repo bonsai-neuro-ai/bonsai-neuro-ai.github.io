@@ -1,0 +1,43 @@
+:root {
+  /* Colors from the logo; using https://www.w3schools.com/colors/colors_picker.asp for lighter darker */
+  /* BLUE */
+  --theme1: #7c878f;
+  --theme1-light: #bac0c4;
+  --theme1-dark: #3b4145;
+  /* TAN */
+  --theme2: #aca299;
+  --theme2-light: #d1ccc7;
+  --theme2-dark: #463f39;
+  /* GRAY */
+  --theme3: #b9b9b9;
+  --theme3-light: #e6e6e6;
+  --theme3-dark: #666666;
+  
+}
+
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --pico-text-selection-color: var(--theme3-light);
+  --pico-primary: var(--theme1-dark);
+  --pico-primary-background: var(--theme1-dark);
+  --pico-primary-underline: var(--theme1-dark);
+  --pico-primary-hover: var(--theme1-dark);
+  --pico-primary-hover-background: var(--theme1-dark);
+  --pico-primary-focus: var(--theme2);
+  --pico-primary-inverse: #fff;
+}
+
+nav img {
+  max-height: 5rem;
+  height: auto;
+  width: auto;
+  vertical-align: middle;
+}
+
+.profile-pic {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  max-height: 150px;
+  object-fit: cover;
+}

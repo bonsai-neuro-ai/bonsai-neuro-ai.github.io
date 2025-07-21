@@ -1,0 +1,59 @@
+# This action is originally based on https://www.dawidsblog.com/posts/tutorial_11ty_github_pages
+# and updated/customized based on GitHub docs
+
+# Name of the action:
+name: Deploy GH Pages
+
+# when should it trigger? 
+on:
+  # trigger when something is pushed to the branch main
+  push: 
+    branches: [ "main", "11ty" ]
+  # make it possible to trigger manually, useful for debugging
+  workflow_dispatch: 
+
+jobs:
+  # Job 1: run eleventy using "npm run build" to compile the static site content
+  build:
+    # this is the (docker) image used to run the steps below
+    runs-on: ubuntu-latest
+
+    steps:
+      # checkout the branch
+      - uses: actions/checkout@v3
+
+      # install the project and to build the page; this populates the static site content in _site
+      - name: 11ty Build
+        id: build
+        uses: actions/setup-node@v4
+      - run: |
+          npm ci
+          npm run build
+
+      - name: Upload static files as artifact
+        id: deployment
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "_site/"
+
+  # Job 2: upload/deploy to GH pages
+  deploy:
+    # Add a dependency to the build job
+    needs: build
+
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+
+    # Deploy to the github-pages environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    # Specify runner + deployment step
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
