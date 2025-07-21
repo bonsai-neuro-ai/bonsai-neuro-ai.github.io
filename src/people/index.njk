@@ -18,7 +18,7 @@ title: People
       {% if person.data.image %}
         <img src="{{ person.data.image }}" alt="{{ person.data.name }}" class="profile-pic" />
       {% else %}
-        <img src="/assets/favicon-192x192.png" alt="{{ person.data.name }}" class="profile-pic" />
+        <img src="/assets/favicon-512x512.png" alt="{{ person.data.name }}" class="profile-pic" />
       {% endif %}
       <h3><a href="{{ person.url }}">{{ person.data.name }}</a></h3>
       <p>{{ person.data.content | truncate(150, true, '...') }}</p>

@@ -15,11 +15,11 @@
         <li><a href="/"><img src="/assets/logo.png" class="header-logo" /></a></li>
       </ul>
       <ul>
-        <li><a href="/people/">People</a></li>
-        <li><a href="/research/">Research</a></li>
-        <li><a href="/teaching/">Teaching</a></li>
-        <li><a href="/resources/">Resources</a></li>
-        {# <li><a href="/blog/">Blog</a></li> #}
+        <li><a href="/people/" {% if page.url.startsWith("/people/") %}aria-current="page"{% endif %}>People</a></li>
+        <li><a href="/research/" {% if page.url.startsWith("/research/") %}aria-current="page"{% endif %}>Research</a></li>
+        <li><a href="/teaching/" {% if page.url.startsWith("/teaching/") %}aria-current="page"{% endif %}>Teaching</a></li>
+        <li><a href="/resources/" {% if page.url.startsWith("/resources/") %}aria-current="page"{% endif %}>Resources</a></li>
+        {# <li><a href="/blog/" {% if page.url.startsWith("/blog/") %}aria-current="page"{% endif %}>Blog</a></li> #}
       </ul>
     </nav>
   </header>
