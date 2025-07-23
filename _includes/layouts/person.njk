@@ -1,0 +1,21 @@
+---
+layout: layouts/page.njk
+---
+
+<section>
+	{% if image %}
+	<img src="{{ image }}" alt="{{ name }}" class="profile-pic" />
+	{% else %}
+	<img src="/assets/favicon-512x512.png" alt="{{ name }}" class="profile-pic" />
+	{% endif %}
+	{{ content | safe }}
+</section>
+
+<section>
+<h2>Contact/Socials</h2>
+<div class="grid">
+	{% if email %}<article><b>Email:</b> {{ email }}</article>{% endif %}
+	{% if bluesky %}<a href="{{ bluesky }}"><article><b>Bluesky</b></article></a>{% endif %}
+	{% if gscholar %}<a href="{{ gscholar }}"><article><b>Google Scholar</b></article></a>{% endif %}
+</div>
+</section>
