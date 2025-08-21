@@ -21,10 +21,32 @@
   --pico-primary-inverse: var(--theme-white);
 }
 
+/* If the user is using dark mode on their device or their browser,
+   then this scheme is used by Pico. Just flipping what is above 
+   in the light theme basically for the property values here. */
+
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]),
+  :host:not([data-theme]) {
+    /*--pico-text-selection-color: var(--theme-accent);*/
+    --pico-primary: var(--theme-white);
+    --pico-primary-background: var(--theme-black);
+    --pico-primary-underline: var(--theme-white);
+    --pico-primary-hover: var(--theme-accent);
+    --pico-primary-hover-background: var(--theme-black);
+    --pico-primary-focus: var(--theme-accent);
+    --pico-primary-inverse: var(--theme-black);
+  }
+}
 
 html, body {
   height: 100%;
-  background-color: var(--theme-white);
+  /* 
+   This here was avoiding Pico from properly enforcing its 
+   dark mode. 
+
+   background-color: var(--theme-white);
+  */
 }
 
 body {
