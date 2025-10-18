@@ -20,7 +20,7 @@ Here's some information for RIT students about courses taught by Prof. Lange:
 
 ### COGS 637 / COS 537: Advanced Neuro-AI: Probability and Generative Models
 
-* Offerred: TBA, likely even-year spring semesters starting Spring 2026
+* Offerred: even-year spring semesters starting Spring 2026
 * Description:
 
 	> This course will cover advanced topics at the intersection of probabilistic modeling, neural computation, and artificial intelligence, with an emphasis on approaches using generative models. Students will develop a deep understanding of how probability theory provides a unified framework for understanding the human brain and intelligence more broadly. Topics include fundamental concepts in probability theory and philosophical foundations of uncertainty, methods for learning and inference in probabilistic models, and probabilistic methods in machine learning like VAEs. The course will cover how probabilistic models have contributed to our understanding of learning, perception, and decision-making. The course will emphasize both theoretical foundations and practical implementations, preparing students to engage with current research in computational neuroscience and AI. Prior exposure to linear algebra, multivariable calculus, machine learning, and probability theory are all recommended.
