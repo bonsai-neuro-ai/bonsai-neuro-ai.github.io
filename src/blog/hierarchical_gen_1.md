@@ -221,8 +221,7 @@ basic assumptions of probability, and more!
     process (**W**), our best approximation to it in a model (**M**),
     and the inferences we actually draw (**Q**).
 2.  I'm simplifying here by assuming that the image is generated
-    directly from the set of leaves of the tree. Perhaps
-    [[$P(Im|s,t,b,l)$]{.katex-mathml}]{.katex} would be more reasonable,
+    directly from the set of leaves of the tree. Perhaps $P(Im|s,t,b,l)$ would be more reasonable,
     since it would allow the image to depend on the species and branches
     of the tree directly. But! Most work on deep generative models makes
     the same simplification where the data depend only on the lowest
@@ -230,7 +229,7 @@ basic assumptions of probability, and more!
     think the "lowest level" is image features rather than object parts,
     as I discussed in **intuition 1**.
 3.  I'm again committing the fallacy here that I warned about
-    in **intuition 1**: I'm being imprecise about the difference between
+    in**intuition 1**: I'm being imprecise about the difference between
     features of the image and features of objects. Here it's a matter of
     convenience -- I don't actually have a 3D generative model of trees
     to render examples from.

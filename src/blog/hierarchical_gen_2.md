@@ -74,12 +74,9 @@ V1<sup><a href="#references">[1]</a></sup>.
 <img src="/assets/blog/vanhaateren_gen.png" loading="lazy" width="579" height="257" />
 <figcaption>In the sparse linear Gaussian model, each small image patch
 in a dataset is modeled as the weighted sum of features. The sparse
-prior encourages only a few <span><span class="katex"><span
-class="katex-mathml"><span
-class="math inline"><strong>x</strong></span></span></span></span>s to
+prior encourages only a few $\mathbf{x}$s to
 explain each image. The result is that, once fit to data, the model’s
-<span><span class="katex"><span class="katex-mathml"><span
-class="math inline"><strong>A</strong><sub><em>i</em></sub></span></span></span></span>s
+$\mathbf{A}_i$s
 (the features visualized on each arrow on the right) tend to pick out
 recurring image parts like edges, corners, gradients, etc, loosely
 resembling the kinds of things neurons in V1 seem to care

@@ -102,10 +102,8 @@ high-dimensional as you like.
 
 Formally, Mutual Information between
 $\mathbf{X}$ and
-$\mathbf{Y}$ is defined as [$\mathcal{I}
-[\mathbf{X},\mathbf{Y}] = \sum_{\mathbf{x}\in\mathbf{X}} 
-\sum_{\mathbf{y}\in\mathbf{Y}} p(\mathbf{x},\mathbf{y}) \log 
-\frac{p(\mathbf{x}, \mathbf{y})}{p(\mathbf{x})p(\mathbf{y})}$]{.katex-display}
+$\mathbf{Y}$ is defined as 
+$$\mathcal{I}[\mathbf{X},\mathbf{Y}] = \sum_{\mathbf{x}\in\mathbf{X}} \sum_{\mathbf{y}\in\mathbf{Y}} p(\mathbf{x},\mathbf{y}) \log \frac{p(\mathbf{x}, \mathbf{y})}{p(\mathbf{x})p(\mathbf{y})}$$
 
 An intuitive way to rewrite this is as a Kullback-Liebler (KL)
 divergence from the joint distribution
