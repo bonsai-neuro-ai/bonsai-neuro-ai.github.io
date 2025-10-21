@@ -1,3 +1,5 @@
+const mathjaxPlugin = require("eleventy-plugin-mathjax");
+
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 module.exports = function (eleventyConfig) {
@@ -7,6 +9,10 @@ module.exports = function (eleventyConfig) {
 
   // Add a copy of static assets files
   eleventyConfig.addPassthroughCopy("src/assets");
+
+  eleventyConfig.addFilter("date", require("./src/assets/js/date.js"));
+  
+  eleventyConfig.addPlugin(mathjaxPlugin);
 
   return {
     dir: {

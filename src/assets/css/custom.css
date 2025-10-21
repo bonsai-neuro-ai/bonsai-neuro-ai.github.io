@@ -70,3 +70,50 @@ nav img {
   max-height: 300px;
   float:right;
 }
+
+/* Base floatable figure — shared rules */
+figure.alignfloat {
+  display: block;
+  width: clamp(140px, 30%, 320px);
+  max-width: 320px;
+  line-height: 1;
+  text-align: center;
+}
+
+/* float left variant */
+figure.alignleft {
+  float: left;
+  margin: 3rem;
+}
+
+/* float right variant */
+figure.alignright {
+  float: right;
+  margin: 3rem;
+}
+
+/* common image handling */
+figure.alignfloat img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.preview{
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    max-height:100px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    content: "";
+    position:relative;
+}
+.preview:before {
+    content:'';
+    width:100%;
+    height:100%;    
+    position:absolute;
+    left:0;
+    top:0;
+    background:linear-gradient(transparent 0, white);
+}

@@ -1,0 +1,14 @@
+---
+layout: layouts/page.njk
+title: Blog
+---
+
+{% set posts = collections.blog | sort(attribute='data.date', reverse=true) %}
+
+{% for post in posts %}
+<article>
+	<h2><a href="{{post.url}}">{{ post.data.title}}</a></h2>
+	<p>By {{ post.data.author }}, {{ post.data.date | date("LLLL yyyy") }}</p>
+    <div class="preview">{{ post.content | safe | truncate(500, true, '...') }}</div>
+</article>
+{% endfor %}

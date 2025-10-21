@@ -4,24 +4,24 @@ title: People
 ---
 
 {% set people = collections.people | sort(attribute='data.group', reverse=true) %}
-{% set currentGroup = '' %}
+{% set currentGroup = people[0].data.group %}
 
-  {% for person in people %}
-    {% if person.data.group != currentGroup %}
-      {% set currentGroup = person.data.group %}
-      </section>
-      <section class="grid">
-      <h2>{{ currentGroup }}</h2>
+<section>
+{% for person in people %}
+  {% if person.data.group != currentGroup %}
+    {% set currentGroup = person.data.group %}
+    </section>
+    <section class="grid">
+    <h2>{{ currentGroup }}</h2>
+  {% endif %}
+
+  <article>
+  {% if person.data.image %}
+    <img src="{{ person.data.image }}" alt="{{ person.data.name }}" class="profile-thumbnail" />
+    {% else %}
+      <img src="/assets/favicon-512x512.png" alt="{{ person.data.name }}" class="profile-thumbnail" />
     {% endif %}
-
-    <article>
-      {% if person.data.image %}
-        <img src="{{ person.data.image }}" alt="{{ person.data.name }}" class="profile-thumbnail" />
-      {% else %}
-        <img src="/assets/favicon-512x512.png" alt="{{ person.data.name }}" class="profile-thumbnail" />
-      {% endif %}
-      <h3><a href="{{ person.url }}">{{ person.data.name }}</a></h3>
-      <p>{{ person.data.content | truncate(150, true, '...') }}</p>
+    <h3><a href="{{ person.url }}">{{ person.data.name }}</a></h3>
     </article>
   {% endfor %}
-</section>
+  </section>
