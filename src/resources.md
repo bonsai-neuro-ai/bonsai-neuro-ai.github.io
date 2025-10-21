@@ -1,6 +1,7 @@
 ---
 layout: layouts/page.njk
 title: Resources
+article: true
 ---
 
 ### For current lab members:

@@ -1,6 +1,7 @@
 ---
 layout: layouts/page.njk
 title: Research
+article: true
 ---
 
 ## Papers

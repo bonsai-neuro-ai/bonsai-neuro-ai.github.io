@@ -25,7 +25,13 @@
 </header>
 
 <main class="container">
+{% if article %}
+<article>
 {{ content | safe }}
+</article>
+{% else %}
+{{ content | safe }}
+{% endif %}
 </main>
 
 <footer class="container">
