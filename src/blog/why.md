@@ -110,7 +110,7 @@ src="/assets/blog/fully-connected.png" loading="lazy"
 sizes="(max-width: 279px) 85vw, 279px" width="279" height="254" />
 <figcaption>Graphically, the trivial solution to the Markov Property is
 a “fully-connected” DAG, where for each node, its parents are all nodes
-to the left of it. <span style="text-decoration: underline;">Any</span>
+to the left of it. <u>Any</u>
 joint distribution can be factorized as a product of conditionals using
 the chain rule. This also means we can shuffle the variables and pull
 the same trick again.</figcaption>
@@ -712,6 +712,8 @@ problem for the reader or for a future version of myself.
     hope) made it clear that they're special cases of "model mismatch,"
     which is the only valid justification for counterfactuals that I'm
     aware of.
+
+------------------------------------------------------------
 
 <span id="footnotes"></span>
 

@@ -74,22 +74,26 @@ nav img {
 /* Base floatable figure — shared rules */
 figure.alignfloat {
   display: block;
-  width: clamp(140px, 30%, 320px);
-  max-width: 320px;
+  width: clamp(140px, 50%, 400px);
+  max-width: 400px;
   line-height: 1;
   text-align: center;
+  margin: 3rem;
 }
 
 /* float left variant */
 figure.alignleft {
   float: left;
-  margin: 3rem;
 }
 
 /* float right variant */
 figure.alignright {
   float: right;
-  margin: 3rem;
+}
+
+/* figure aligned center */
+figure.aligncenter{
+  float: center;
 }
 
 /* common image handling */

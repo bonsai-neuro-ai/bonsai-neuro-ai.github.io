@@ -6,7 +6,7 @@ layout: layouts/page.njk
 <h1>{{ title }}</h1>
 <p>By {{ author }} ca. {{ date | date("LLLL yyyy") }}</p>
 {% if "archival" in tags %}
-<p><b>Archival note: this is a post recovered from Richard's old grad-school blog "Box and Arrow Brain." References to 'recent' things are relative to 2019, and references to 'the lab' mean the Haefner Lab at UR</b></p>
+<p><b>Archival note: this is a post recovered from Richard's old grad-school blog "Box and Arrow Brain." References to 'recent' things are relative to 2019, references to 'the lab' mean the Haefner Lab at UR, and information may generally be outdated.</b></p>
 {% endif %}
 {{ content | safe }}
 </article>
