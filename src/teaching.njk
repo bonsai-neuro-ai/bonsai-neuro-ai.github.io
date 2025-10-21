@@ -1,0 +1,14 @@
+---
+layout: layouts/page.njk
+title: Teaching
+---
+
+<p>Here's some information for RIT students about courses taught by Prof. Lange:</p>
+
+{% for course in courses %}
+	<article>
+	<h3>{{ course.title }}</h3>
+	<p><b>Offered:</b> {{ course.offered }}</p>
+	<p>{{ course.blurb }}</p>
+	</article>
+{% endfor %}
