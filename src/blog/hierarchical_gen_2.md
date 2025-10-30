@@ -146,7 +146,7 @@ Gaussian.
 ### Priors and Average-Posteriors
 
 <figure class="alignright alignfloat">
-<img src="/assets/blog/loop-1-1024x855_002.png" loading="lazy" width="232" height="193" />
+<img src="/assets/blog/loop-1.png" loading="lazy" width="232" height="193" />
 <figcaption>The rules of probability define a “loop” from the prior p(x)
 to images (or data more generally) p(I) and back again. Inference and
 generation are mirror images. I call this “Bayes’ Loop”. The next figure
