@@ -1,5 +1,5 @@
 ---
-layout: layouts/page.njk
+layout: layouts/person.njk
 title: Nikita Gallegos
 name: Nikita Gallegos
 group: PhD Students
