@@ -1,0 +1,11 @@
+---
+title: Learning to learn from counterfactuals
+tags: pitch
+permalink: false
+---
+
+In the causality literature, there is a distinction between passive observation, modeling interventions, and counterfactual reasoning (some information on this in [this blog post by Dr. Lange](/blog/why/)). Imagine you're designing the optimal reinforcement-learning agent who will operate in a simple POMDP. Do you give the agent the ability to plan? This would require some intervention-level model so that the agent can reason about the future consequences of its actions. There are clear well-established benefits of planning in model-based reinforcement learning (MBRL). Do you also give the agent the ability to store episodic memories? Storage and replay of past events is also a well-established strategy for training reinforcement learning agents. 
+
+To a first approximation, we can think of counterfactual reasoning as a form of planning that is initialized from past episodic experiences, so the agent imagines hypothetical alternate outcomes of past events. We hypothesize that there are two high-level strategies than an 'optimal' agent could be designed: first, an agent might never store episodic memories. If planning is relatively cheap and they're a fast and effective learner, an agent could be entirely forward-looking in this sense. Second, an agent might actually benefit from learning from revisiting past experiences counterfactually. We suspect this happens when memory storage is cheap and the agent's model of the world is sufficiently _wrong_. 
+
+The project would be this: set up an agent in a simple reinforcement learning environment. Also give the agent meta-actions with associated meta-costs for storing episodic memory, planning, and pausing to reflect on the past counterfactually. Use classic reinforcement learning techniques to learn the optimal meta-policy over which meta-action to take. Then, test the hypothesis that different 'strategies' emerge depending on model accuracy and memory.

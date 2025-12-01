@@ -1,0 +1,17 @@
+---
+layout: layouts/page.njk
+title: Project Pitches
+---
+
+{% set pitches = collections.pitch %}
+
+<h2>Project ideas for prospective students</h2>
+
+<p>This page contains a loosely-curated set of project ideas. Prospective students interested in doing a (1-2 semester long) project in the lab may pick something on this list OR propose a new project based on things we in the lab are interested in.</p>
+
+{% for pitch in pitches %}
+	<article>
+	<h3>{{ pitch.data.title }}</h3>
+	<p>{{ pitch.content | safe }}</p>
+	</article>
+{% endfor %}
