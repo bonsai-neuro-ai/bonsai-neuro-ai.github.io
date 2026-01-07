@@ -1,30 +1,46 @@
-/* Lab color palette from the logo */
+/* ================================
+   Lab Theme Tokens (single source of truth)
+   Update these, and all Pico mappings inherit.
+   =========================================== */
 :root {
-  --theme-primary: #233e7a; /* Dark Blue */
+  --theme-dark: #233e7a; /* Dark Blue */
+  --theme-mid: #237a7a; /* darkish greenish */
   --theme-light: #009ddc;  /* Light Blue */
   --theme-accent: #f76902; /* RIT Orange */ 
   --theme-white: #f7f7f7; /* White */
   --theme-black: #202020; /* Black */
 }
 
-/* Overriding Pico defaults following their docs/examples */
-[data-theme=light],
-:root:not([data-theme=dark]),
-:host:not([data-theme=dark]) {
-  /*--pico-text-selection-color: var(--theme-accent);*/
-  --pico-primary: var(--theme-black);
-  --pico-primary-background: var(--theme-white);
-  --pico-primary-underline: var(--theme-black);
-  --pico-primary-hover: var(--theme-accent);
-  --pico-primary-hover-background: var(--theme-white);
-  --pico-primary-focus: var(--theme-accent);
-  --pico-primary-inverse: var(--theme-white);
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --pico-background-color: var(--theme-white);
+  --pico-color: var(--theme-black);
+  --pico-text-selection-color: var(--theme-light);
+  
+  --pico-primary: var(--theme-dark);
+  --pico-primary-underline: var(--pico-primary);
+  --pico-primary-hover-underline: var(--pico-primary-hover);
+  --pico-primary-focus: var(--pico-primary);
+  --pico-primary-background: var(--theme-dark);
+  --pico-primary-hover-background: var(--theme-accent);
+
+  --pico-secondary: var(--theme-mid);
+  --pico-secondary-underline: var(--pico-secondary);
+  --pico-secondary-hover-underline: var(--pico-secondary-hover);
+  --pico-secondary-focus: var(--pico-secondary);
+  --pico-secondary-background: var(--theme-dark);
+  --pico-secondary-hover-background: var(--theme-accent);
+
+  --pico-contrast: var(--theme-light);
+  --pico-contrast-underline: var(--pico-contrast);
+  --pico-contrast-hover-underline: var(--pico-contrast-hover);
+  --pico-contrast-focus: var(--pico-contrast);
 }
 
 
 html, body {
   height: 100%;
-  background-color: var(--theme-white);
+  background-color: var(--pico-background-color);
 }
 
 body {
@@ -119,5 +135,5 @@ figure.alignfloat img {
     position:absolute;
     left:0;
     top:0;
-    background:linear-gradient(transparent 0, white);
+    background:linear-gradient(transparent 0, var(--pico-card-background-color));
 }
