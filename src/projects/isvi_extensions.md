@@ -10,9 +10,9 @@ We would like for some motivated students to pick up the proverbial torch and ex
 
 - __Project idea #1:__ for the more theoretically inclined, there are bounds in the 2022 paper which are conjectured but unproven. There is also some speculation on how they could be sharpened.
 - __Project idea #2:__ a more empirical project would be to optimize the implementation of the theory using state of the art sampling techniques like Kinetic Langevin.
-- __Project idea #3:__ making the method more 'wall time' efficient rather than just more 'sample efficient' may require adapting some stochastic-likelihood sampling techniques [REF TODO].
+- __Project idea #3:__ making the method more 'wall time' efficient rather than just more 'sample efficient' may require adapting some stochastic-likelihood sampling techniques$^{[2]$.
 
 __Suggested background reading:__
 
 1. [Lange et al (2022)](https://proceedings.mlr.press/v180/lange22a.html)
-1. REF #2
+1. [Ma et al (2025)](https://papers.nips.cc/paper_files/paper/2015/hash/9a4400501febb2a95e79248486a5f6d3-Abstract.html)
