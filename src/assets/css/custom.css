@@ -38,6 +38,64 @@
 }
 
 
+/* Dark mode Pico overrides using the lab theme palette.
+   The declarations below appear twice: once for an explicit [data-theme="dark"]
+   attribute (e.g. a future JS toggle) and once inside @media for automatic
+   OS-level dark preference. CSS has no native way to share a declaration block
+   across an at-rule boundary and an element selector, so this duplication is
+   intentional — update both blocks together if the dark palette ever changes. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --pico-background-color: var(--theme-black);
+    --pico-color: var(--theme-white);
+    --pico-text-selection-color: var(--theme-light);
+
+    --pico-primary: var(--theme-light);
+    --pico-primary-underline: var(--pico-primary);
+    --pico-primary-hover-underline: var(--pico-primary-hover);
+    --pico-primary-focus: var(--pico-primary);
+    --pico-primary-background: var(--theme-light);
+    --pico-primary-hover-background: var(--theme-accent);
+
+    --pico-secondary: var(--theme-mid);
+    --pico-secondary-underline: var(--pico-secondary);
+    --pico-secondary-hover-underline: var(--pico-secondary-hover);
+    --pico-secondary-focus: var(--pico-secondary);
+    --pico-secondary-background: var(--theme-mid);
+    --pico-secondary-hover-background: var(--theme-accent);
+
+    --pico-contrast: var(--theme-accent);
+    --pico-contrast-underline: var(--pico-contrast);
+    --pico-contrast-hover-underline: var(--pico-contrast-hover);
+    --pico-contrast-focus: var(--pico-contrast);
+  }
+}
+
+[data-theme="dark"] {
+  --pico-background-color: var(--theme-black);
+  --pico-color: var(--theme-white);
+  --pico-text-selection-color: var(--theme-light);
+
+  --pico-primary: var(--theme-light);
+  --pico-primary-underline: var(--pico-primary);
+  --pico-primary-hover-underline: var(--pico-primary-hover);
+  --pico-primary-focus: var(--pico-primary);
+  --pico-primary-background: var(--theme-light);
+  --pico-primary-hover-background: var(--theme-accent);
+
+  --pico-secondary: var(--theme-mid);
+  --pico-secondary-underline: var(--pico-secondary);
+  --pico-secondary-hover-underline: var(--pico-secondary-hover);
+  --pico-secondary-focus: var(--pico-secondary);
+  --pico-secondary-background: var(--theme-mid);
+  --pico-secondary-hover-background: var(--theme-accent);
+
+  --pico-contrast: var(--theme-accent);
+  --pico-contrast-underline: var(--pico-contrast);
+  --pico-contrast-hover-underline: var(--pico-contrast-hover);
+  --pico-contrast-focus: var(--pico-contrast);
+}
+
 html, body {
   height: 100%;
   background-color: var(--pico-background-color);
