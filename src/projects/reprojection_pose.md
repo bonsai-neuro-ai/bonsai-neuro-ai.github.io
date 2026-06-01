@@ -4,7 +4,17 @@ tags: pitch
 permalink: false
 ---
 
-__Note: this project is taken by a Spring 26 capstone student__
+### Update (Spring 2026)
+
+Version 1 of this project was done by MS student Kolbe Yang as a Capstone in Spring 2026. [Repository here.](https://github.com/bonsai-neuro-ai/pose-estimation) The result of this is a proof-of-concept: post-processing by enforcing some biophysical constraints works and generally improves 3D poses extracted from 2D videos. Still to-do:
+
+1. Dial in hyperparameters / fit priors to data
+2. Speed optimizations / online inference for real-time
+3. More complex scenes: multiple people, nonstationary camera
+4. Customized model training or fine-tuning. Enforce that heatmaps are interpretable as probabilities by updating the training loss.
+5. Ultimately publish as a tool + CV paper
+
+### Original pitch
 
 We'd like to improve on state-of-the-art Computer Vision systems for human pose estimation. Pose estimation is the problem of determining where different body eypoints (elbows, knees, eyes, etc) are in space. There are some freely available models like OpenPose and MediaPipe which you can download and use, but all such systems are known to make systematic errors.
 
